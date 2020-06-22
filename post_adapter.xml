@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/parentTextView"
+        android:layout_width="0dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="parentPostContent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/voteCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/downVoteButton"
+        android:layout_width="68dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginBottom="1dp"
+        android:src="@android:drawable/arrow_down_float"
+        app:layout_constraintBottom_toBottomOf="@+id/upVoteButton"
+        app:layout_constraintStart_toStartOf="@+id/upVoteButton"
+        app:layout_constraintTop_toBottomOf="@+id/parentTextView" />
+
+    <ImageButton
+        android:id="@+id/upVoteButton"
+        android:layout_width="68dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:src="@android:drawable/arrow_up_float"
+        app:layout_constraintStart_toStartOf="@+id/parentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/parentTextView" />
+
+    <Button
+        android:id="@+id/replyButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="reply"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ReportButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ReportButton"
+        app:layout_constraintTop_toBottomOf="@+id/parentTextView" />
+
+    <TextView
+        android:id="@+id/idTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID"
+        app:layout_constraintEnd_toStartOf="@+id/parentTextView"
+        app:layout_constraintStart_toStartOf="@+id/parentTextView"
+        app:layout_constraintTop_toTopOf="@+id/babyCommentListView" />
+
+    <TextView
+        android:id="@+id/voteCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="138dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="16dp"
+        android:text="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ReportButton"
+        android:layout_width="102dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:text="Delete"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/parentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/parentTextView" />
+
+    <ListView
+        android:id="@+id/babyCommentListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/idTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ReplyEditText"
+        android:layout_width="394dp"
+        android:layout_height="77dp"
+        android:ems="10"
+        android:inputType="none"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="191dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
